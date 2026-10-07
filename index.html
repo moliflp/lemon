@@ -2,86 +2,31 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tu Nombre · Diseñador gráfico</title>
-<meta name="description" content="Portfolio de diseño gráfico: identidad visual, cartas de restaurante, cartelería y diseño editorial.">
-<meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tu Nombre · Diseño gráfico</title>
+<meta name="description" content="Portfolio de diseño gráfico: identidad visual, cartas, cartelería y diseño editorial.">
+<meta name="theme-color" content="#0c0d11">
+<meta property="og:title" content="Tu Nombre · Diseño gráfico">
+<meta property="og:description" content="Identidades, cartas, cartelería y piezas editoriales para negocios con carácter.">
+<meta property="og:image" content="assets/mupi.jpg">
 <link rel="icon" href="assets/destacada-13.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="aurora" aria-hidden="true"></div>
-
-<nav class="dock glass" aria-label="Principal">
-  <a href="#inicio" class="on">Inicio</a>
-  <a href="#trabajos">Trabajos</a>
-  <a href="#servicios">Servicios</a>
-  <a href="#contacto" class="cta">Contacto</a>
-</nav>
-
-<main>
-  <section id="inicio" class="hero wrap">
-    <div class="hero-text">
-      <p class="chip glass">Diseñador gráfico · Disponible para proyectos</p>
-      <h1>Diseño que hace que tu negocio se recuerde.</h1>
-      <p class="lead">Creo identidades, cartas, cartelería y piezas editoriales para bares, restaurantes y marcas locales. Todo lo que ves aquí lo he diseñado yo.</p>
-      <div class="actions">
-        <a class="btn primary" href="#trabajos">Ver trabajos</a>
-        <a class="btn glass" href="#contacto">Hablemos</a>
-      </div>
-    </div>
-    <div class="icons" aria-hidden="true">
-      <img src="assets/destacada-13.jpg" alt="">
-      <img src="assets/destacada-14.jpg" alt="">
-      <img src="assets/destacada-15.jpg" alt="">
-      <img src="assets/destacada-16.jpg" alt="">
-    </div>
-  </section>
-
-  <section id="trabajos" class="wrap">
-    <h2>Trabajos</h2>
-    <div class="seg glass" role="tablist" aria-label="Filtrar trabajos"></div>
-    <div class="grid" id="grid"></div>
-  </section>
-
-  <section id="servicios" class="wrap">
-    <h2>Qué puedo hacer por ti</h2>
-    <div class="bento">
-      <article class="glass w1"><h3>Identidad visual</h3><p>Logotipo, colores, tipografías y un sistema que funciona en redes, envases y local.</p></article>
-      <article class="glass w2"><h3>Cartas y menús</h3><p>Diseño claro y bonito, listo para imprimir, con versión en varios idiomas.</p></article>
-      <article class="glass w3"><h3>Cartelería y rótulos</h3><p>Rótulos, vinilos, mupis, vasos y pegatinas preparados para producción.</p></article>
-      <article class="glass w4"><h3>Diseño editorial</h3><p>Folletos y revistas con jerarquía de lectura y maquetación cuidada.</p></article>
-    </div>
-  </section>
-
-  <section id="contacto" class="wrap">
-    <div class="contact glass">
-      <h2>¿Tienes un proyecto en mente?</h2>
-      <p class="lead">Cuéntame qué necesitas y te respondo con una propuesta.</p>
-      <div class="actions">
-        <a class="btn primary" href="mailto:tu@email.com">Escribirme un email</a>
-        <a class="btn glass" href="https://instagram.com/tu_usuario" target="_blank" rel="noopener">Instagram</a>
-      </div>
-    </div>
-    <footer>© <span id="y"></span> Tu Nombre · Diseño gráfico</footer>
-  </section>
-</main>
-
-<dialog id="sheet" class="sheet glass" aria-labelledby="s-title">
-  <button class="x" aria-label="Cerrar" data-close>✕</button>
-  <div class="stage">
-    <button class="nav prev glass" aria-label="Anterior">‹</button>
-    <img id="s-img" alt="">
-    <button class="nav next glass" aria-label="Siguiente">›</button>
-  </div>
-  <div class="thumbs" id="s-thumbs"></div>
-  <div class="info">
-    <h3 id="s-title"></h3>
-    <p id="s-desc"></p>
-  </div>
-</dialog>
-
+<canvas id="gl" aria-hidden="true"></canvas>
+<div id="ld" aria-hidden="true"><span id="ldt" class="disp"></span><i></i></div>
+<div id="bar"></div>
+<div id="cursor" aria-hidden="true"></div>
+<div id="cv" aria-hidden="true"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><b id="cvt"></b></div>
+<header id="hd">
+  <a class="logo" href="#/" data-go="top">Tu Nombre</a>
+  <nav class="seg" aria-label="Principal"><a href="#/" data-go="top">Inicio</a><a href="#/" data-go="trabajos">Trabajos</a></nav>
+</header>
+<main id="app"></main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
